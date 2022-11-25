@@ -14,7 +14,8 @@ android_app {
         "androidx.core_core",
         "androidx.preference_preference",
         "org.lineageos.settings.resources",
-        "org.lineageos.platform.internal"
+        "org.lineageos.platform.internal",
+        "vendor.sony.charger-V1-java",
     ],
 
     optimize: {
