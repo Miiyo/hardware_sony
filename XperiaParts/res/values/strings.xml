@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">XperiaParts</string>
-    
-    <!-- Charger Related Settings -->
-    <string name="charger_setting_header">Advanced Charging Settings</string>
+    <string name="app_summary" translatable="false">Adjust Various Xperia Settings</string>
+
+    <!-- Charging Related Settings -->
+    <string name="charging_title">Charging</string>
+    <string name="charger_setting_header">Battery Care</string>
     <string name="charger_setting_summary">Adjust charging related settings</string>
 
     <!-- Charger preference screen strings -->
