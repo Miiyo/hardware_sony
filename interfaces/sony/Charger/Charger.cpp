@@ -22,17 +22,15 @@ namespace charger {
 
 enum SUPPORTED_BOARD {
     kona = 0,
-    lahaina = 1,
+    sdm845 = 1,
 };
 
 static constexpr const char* kChgActivationPath[] = {
-        "/sys/class/power_supply/battery_ext/smart_charging_activation",
-        "/sys/class/battchg_ext/smart_charging_activation",
+        "/sys/class/power_supply/battery/smart_charging_activation",
 };
 
 static constexpr const char* kChgInterruptionPath[] = {
-        "/sys/class/power_supply/battery_ext/smart_charging_interruption",
-        "/sys/class/battchg_ext/smart_charging_interruption",
+        "/sys/class/power_supply/battery/smart_charging_interruption",
 };
 
 static constexpr const char* kBatCapacityPath[] = {
@@ -48,8 +46,8 @@ Charger::Charger() {
 
     if (strncmp(board_name, "kona", strlen("kona")) == 0) {
         chargerBoard = kona;
-    } else if (strncmp(board_name, "lahaina", strlen("lahaina")) == 0) {
-        chargerBoard = lahaina;
+    } else if (strncmp(board_name, "sdm845", strlen("sdm845")) == 0) {
+        chargerBoard = sdm845;
     } else {
         LOG(ERROR) << "Failed to get board number, default to kona";
         chargerBoard = kona;
