@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- * Copyright (C) 2022 The LineageOS Project
+ * Copyright (C) 2023 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
 -->
+
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,26 +13,30 @@
         android:key="c"
         android:title="@string/charging_title">
 
+    <PreferenceCategory
+        android:key="c"
+        android:title="@string/charging_title">
+
         <Preference
             android:key="advanced_charger_settings"
-            android:summary="@string/charger_setting_summary"
             android:icon="@drawable/ic_battery_care"
             android:title="@string/charger_setting_header"
-            android:fragment="org.lineageos.settings.device.charger.ChargerSettingsActivity">
+            android:summary="@string/charger_setting_summary"
+            android:fragment="com.xperia.parts.charger.ChargerSettingsActivity">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetPackage="org.lineageos.settings.device"
-                android:targetClass="org.lineageos.settings.device.charger.ChargerSettingsActivity" />
+                android:targetPackage="com.xperia.parts"
+                android:targetClass="com.xperia.parts.charger.ChargerSettingsActivity" />
         </Preference>
 
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="dolby"
-        android:title="@string/dolby_category">
+        android:key="audio"
+        android:title="@string/audio_title">
 
        <Preference
-            android:key="audio_dolby_atmos"
+            android:key="audio_dolby_settings"
             android:icon="@drawable/ic_dolby"
             android:title="@string/dolby_title"
             android:summary="@string/dolby_summary"
