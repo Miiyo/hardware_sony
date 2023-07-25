@@ -41,6 +41,26 @@
                 android:resource="@drawable/ic_xperia_logo"/>
         </activity>
 
+        <activity
+                android:name=".sound.AudioSettingsActivity"
+                android:exported="false"
+                android:theme="@style/Theme.SubSettingsBase"
+                android:label="@string/audio_setting_header">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS"/>
+            </intent-filter>
+        </activity> 
+
+        <activity
+                android:name=".charger.ChargerSettingsActivity"
+                android:exported="false"
+                android:theme="@style/Theme.SubSettingsBase"
+                android:label="@string/charger_setting_header">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS"/>
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".charger.ChargerTileService"
             android:label="@string/charger_qs_tile_title"
@@ -54,16 +74,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-
-        <activity
-                android:name=".charger.ChargerSettingsActivity"
-                android:exported="false"
-                android:theme="@style/Theme.SubSettingsBase"
-                android:label="@string/charger_setting_header">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS"/>
-            </intent-filter>
-        </activity>
 
     </application>
 </manifest>
